@@ -1,0 +1,22 @@
+# ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: original-covid-app-container-deployment
+  labels:
+    app: original-covid-app-container
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: original-covid-app-container-pod
+  template:
+    metadata:
+      labels:
+        app: original-covid-app-container-pod
+    spec:
+      containers:
+      - name: original-covid-app-container
+        image: watanabe61/original-covid-app-container:latest
+        ports:
+        - containerPort: 80
