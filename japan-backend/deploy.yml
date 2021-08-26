@@ -1,0 +1,22 @@
+# ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: original-covid-app-japan-backend-deployment
+  labels:
+    app: original-covid-app-japan-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: original-covid-app-japan-backend-pod
+  template:
+    metadata:
+      labels:
+        app: original-covid-app-japan-backend-pod
+    spec:
+      containers:
+      - name: original-covid-app-japan-backend
+        image: watanabe61/original-covid-app-japan-backend:latest
+        ports:
+        - containerPort: 5000
