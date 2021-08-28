@@ -1,0 +1,16 @@
+# https://kubernetes.io/ja/docs/concepts/services-networking/service/
+apiVersion: v1
+kind: Service
+metadata:
+  name: original-covid-app-japan-frontend-service
+  labels:
+    app: original-covid-app-japan-frontend
+spec:
+  selector:
+    app: original-covid-app-japan-frontend-pod
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  
