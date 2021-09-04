@@ -1,0 +1,49 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: original-covid-app-japan-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1$2
+  labels:
+    app: k8s-hands-on
+spec:
+  rules:
+  # - host: my.kubernetes.example
+  - http:
+      paths: 
+      - path: /api/backend/japan/(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: original-covid-app-japan-backend-service
+            port: 
+              number: 5000
+      - path: /api/frontend/japan/(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: original-covid-app-japan-frontend-service
+            port:
+              number: 80
+      - path: /api/frontend/world/(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: original-covid-app-world-service
+            port: 
+              number: 80
+      - path: /.*
+        pathType: Prefix
+        backend:
+          service:
+            name: original-covid-app-container-service
+            port: 
+              number: 80
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: original-covid-app-container-service
+            port: 
+              number: 80
