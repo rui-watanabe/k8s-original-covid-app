@@ -1,4 +1,4 @@
-# Name
+# Description
 「COVID LIVE DASHBORD」
 海外と日本のコロナ感染状況をリアルタイムで取得し、データをグラフ化表示したWebアプリケーション。
 
