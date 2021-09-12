@@ -6,11 +6,10 @@ metadata:
   labels:
     app: original-covid-app-japan-backend
 spec:
-  type: LoadBalancer
-  ports:
-  - name: backend-port
-    port: 80
-    targetPort: 5000
-    protocol: TCP
   selector:
     app: original-covid-app-japan-backend-pod
+  type: ClusterIP
+  ports:
+    - port: 5000
+      targetPort: 5000
+      protocol: TCP

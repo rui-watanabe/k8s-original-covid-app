@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: original-covid-app-root-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    kubernetes.io/tls-acme: "true"
+    ingress.kubernetes.io/ssl-redirect: "false"
+    cert-manager.io/cluster-issuer: "letsencrypt-issuer"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+  labels:
+    app: original-covid-app-root-ingress
+spec:
+  tls:
+  - hosts:
+      - original-covid-app.infra-structure.work
+    secretName: infra-structure-work-tls
+  rules:
+    - host: original-covid-app.infra-structure.work
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: original-covid-app-container-service
+              port:
+                number: 80
