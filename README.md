@@ -4,7 +4,7 @@
 
 # DEMO
 COVID LIVE DASHBOARD WORLD：
-![demo](https://gyazo.com/ee8f222d43b21fcb283ddefc1ae1f620/raw)
+![demo](https://gyazo.com/d7900a952860d23e5f1ea0e653ef99de/raw)
 全国医療提供体制状況：
 ![demo](https://gyazo.com/563c0e392a0f571e0c6df9952fd7458c/raw)
 
