@@ -38,7 +38,7 @@ JavaScriptとCSSをWebpackでモジュールバンドルすることで、各Com
 「Container」で表示を行なっているのは遷移ボタンのみで、各コンポーネントを読み込むことによって他の表示を行なっている。<br>
 「Container」のルーティング設定では、下記のように行なっている<br>
 <br>
-
+wp
 |Container React Path|Ingress Path|Description|
 |:---|:---|:---|
 |/|/api/frontend/world|「World Component」を提供するAPIを取得|
@@ -58,6 +58,10 @@ JavaScriptとCSSをWebpackでモジュールバンドルすることで、各Com
 
 # CI/CD
 Container,World Component, Japan Prefecture Component,Japan Prefecture Backendでは、GitHub Actionsで、プルリクエスト時による自動テストと、プッシュ時によるコンテナレジストリーへの自動デプロイを行なっている。
+
+# Web UIダッシュボードでのリソース情報の収集/監視
+Kubernetes環境のリソース情報の収集や監視を行うため、Web UIダッシュボードを導入。
+![demo](https://gyazo.com/094e039de479c0de5a706205ccb9f748/raw)
 
 # Repository
 Container：<br>
