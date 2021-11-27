@@ -56,8 +56,14 @@ wp
 
 ![demo](https://gyazo.com/7bdebe12cff1ab5a45f440e45f064030/raw)
 
-# CI/CD
-Container,World Component, Japan Prefecture Component,Japan Prefecture Backendでは、GitHub Actionsで、プルリクエスト時による自動テストと、プッシュ時によるコンテナレジストリーへの自動デプロイを行なっている。
+# GitHub ActionsでのCI
+Container,World Component, Japan Prefecture Component,Japan Prefecture Backendでは、GitHub Actionsで、プルリクエスト時による自動テストとコンテナレジストリーの更新を行なっている。
+
+# ArgoCD
+マニフェストリポジトリでの更新があった際の自動デプロイを、ArgoCDで行っている。
+
+![demo](https://gyazo.com/ed8b886b2ea2a260c7fcf36ba9486dc3/raw)
+
 
 # Web UIダッシュボードでのリソース情報の収集/監視
 Kubernetes環境のリソース情報の収集や監視を行うため、Web UIダッシュボードを導入。
