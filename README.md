@@ -3,10 +3,7 @@
 海外と日本のコロナ感染状況をリアルタイムで取得し、データをグラフ化表示したWebアプリケーション。
 
 # DEMO
-COVID LIVE DASHBOARD WORLD：
-![demo](https://gyazo.com/d7900a952860d23e5f1ea0e653ef99de/raw)
-全国医療提供体制状況：
-![demo](https://gyazo.com/563c0e392a0f571e0c6df9952fd7458c/raw)
+![demo](https://gyazo.com/764f9a5fd630c302992a0d80d757f331/raw)
 
 # URL
 https://original-covid-app.infra-structure.work/
