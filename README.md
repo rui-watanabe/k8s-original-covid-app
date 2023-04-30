@@ -6,7 +6,7 @@
 ![demo](https://gyazo.com/764f9a5fd630c302992a0d80d757f331/raw)
 
 # URL
-https://original-covid-app.infra-structure.work/
+https://original-covid-app-microfront.web.app/
 
 # Kubernetes
 - Kubernetesの概要<br>
