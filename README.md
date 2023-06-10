@@ -35,9 +35,9 @@ JavaScriptとCSSをWebpackでモジュールバンドルすることで、各Com
 「Container」で表示を行なっているのは遷移ボタンのみで、各コンポーネントを読み込むことによって他の表示を行なっている。<br>
 「Container」のルーティング設定では、下記のように行なっている<br>
 <br>
-wp
+
 |Container React Path|Ingress Path|Description|
-|:---|:---|:---|
+| :--- | :---: | ---: |
 |/|/api/frontend/world|「World Component」を提供するAPIを取得|
 |/prefecutre|/api/frontend/japan|「Japan Prefecture Component」を提供するAPIを取得|
 |上記以外|| 404ページを表示 |
